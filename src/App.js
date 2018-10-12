@@ -1,12 +1,20 @@
-import React, { Component } from 'react';
-import './style';
+import React, { PureComponent } from 'react';
+import Header from './common/header';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
+import store from './store';
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
-      <div className="App">
-        <div>hello</div>
-      </div>
+      <Provider store={store}>
+        <BrowserRouter>
+          <div>
+            <Header></Header>
+            <Route></Route>
+          </div>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }
