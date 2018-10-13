@@ -18,7 +18,7 @@ class Slide extends PureComponent {
         <Carousel {...settings}>
           {
             this.props.list.map((item) => {
-              return <div key={item.id}><img className='img' src={item.imgUrl} alt="" /></div>
+              return <div key={item.get('id')}><img className='img' src={item.get('imgUrl')} alt="" /></div>
             })
           }
         </Carousel>

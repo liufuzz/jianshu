@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
 import Slide from './components/Slide';
+import Recommend from './components/Recommend';
 import { HomeWrapper, Container, Main, Aside } from './style';
 
 class Home extends PureComponent {
@@ -11,6 +12,7 @@ class Home extends PureComponent {
         <Container>
           <Main>
             <Slide></Slide>
+            <Recommend></Recommend>
           </Main>
           <Aside>aside</Aside>
         </Container>

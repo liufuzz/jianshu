@@ -28,7 +28,7 @@ injectGlobal`
   }
   body {
     line-height: 1;
-    /* padding-top: 58px; */
+    padding-top: 58px;
   }
   ol, ul {
     list-style: none;

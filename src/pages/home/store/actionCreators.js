@@ -3,7 +3,8 @@ import * as constants from './constants';
 
 const changeHomeList = (result) => ({
   type: constants.CHANGE_HOME_LIST,
-  slideList: result.slideList
+  slideList: result.slideList,
+  recommendList: result.recommendList,
 })
 
 export const getHomeData = () => {
