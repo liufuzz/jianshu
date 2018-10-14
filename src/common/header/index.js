@@ -50,7 +50,7 @@ class Header extends PureComponent {
                 </NavbarItem>
               </Link>
               <NavbarItem>
-                <Icon className='antd-icon icon' type='shake' />
+                <Icon className='antd-icon icon' type='mobile' />
                 下载App
               </NavbarItem>
               <SearchWrapper>

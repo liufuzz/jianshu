@@ -74,3 +74,65 @@ export const RecommendMore = styled.span`
     margin-left: 3px;
   }
 `;
+
+// List样式
+export const ListWrapper = styled.div`
+  border-top: 1px solid #dcdcdc;
+`;
+export const ListContainer = styled.ul`
+  /* border-top: 1px solid #dcdcdc; */
+`;
+export const ListItem = styled.li`
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #dcdcdc;
+  .pic {
+    display: block;
+    float: right;
+    width: 125px;
+    height: 100px;
+    border-radius: 5px;
+  }
+`;
+export const ListInfo = styled.div`
+  width: 500px;
+  float: left;
+  .title {
+    line-height: 27px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  .desc {
+    line-height: 24px;
+    font-size: 13px;
+    color: #999;
+  }
+`;
+export const ListMeta = styled.div`
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 8px;
+  font-size: 12px;
+`;
+export const ListMetaItem = styled.span`
+  margin-right: 10px;
+  color: #a5a5a5;
+  .antd-icon {
+    margin-right: 3px;
+    font-style: normal;
+    font-weight: 400;
+  }
+`;
+export const LoadMore = styled.div`
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin: 30px auto 60px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  background: #a5a5a5;
+  font-size: 15px;
+`;

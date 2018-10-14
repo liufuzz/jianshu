@@ -17,7 +17,6 @@ class Recommend extends PureComponent {
             )
           })
         }
-
         <RecommendMore>
           更多热门专题
           <Icon className='antd-icon' type="right" theme="outlined" />

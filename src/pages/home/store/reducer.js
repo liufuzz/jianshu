@@ -3,7 +3,9 @@ import * as constants from './constants';
 
 const defaultState = fromJS({
   slideList: [],
-  recommendList: []
+  recommendList: [],
+  noteList: [],
+  noteListPage: 1
 });
 
 export default (state = defaultState, action) => {
@@ -11,8 +13,14 @@ export default (state = defaultState, action) => {
     case constants.CHANGE_HOME_LIST:
       return state.merge({
         slideList: fromJS(action.slideList),
-        recommendList: fromJS(action.recommendList)
-      })
+        recommendList: fromJS(action.recommendList),
+        noteList: fromJS(action.noteList),
+      });
+    case constants.CHANGE_HOME_MORE_LIST:
+      return state.merge({
+        noteList: state.get('noteList').concat(fromJS(action.noteMoreList)),
+        noteListPage: action.nextPage
+      });
     default:
       return state;
   }
