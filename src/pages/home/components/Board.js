@@ -1,11 +1,27 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import { BoardWrappper, BoardItem } from '../style';
 
 class Board extends PureComponent {
   render() {
     return (
-      <div>Board</div>
+      <BoardWrappper>
+        {
+          this.props.list.map((item) => {
+            return (
+              <BoardItem key={item.get('id')}>
+                <img src={item.get('imgUrl')} alt="" />
+              </BoardItem>
+            )
+          })
+        }
+      </BoardWrappper>
     )
   }
 }
 
-export default Board;
+const mapState = (state) => ({
+  list: state.getIn(['home', 'boardList'])
+})
+
+export default connect(mapState, null)(Board);

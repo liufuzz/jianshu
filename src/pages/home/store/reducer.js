@@ -5,7 +5,8 @@ const defaultState = fromJS({
   slideList: [],
   recommendList: [],
   noteList: [],
-  noteListPage: 1
+  noteListPage: 1,
+  boardList: []
 });
 
 export default (state = defaultState, action) => {
@@ -15,6 +16,7 @@ export default (state = defaultState, action) => {
         slideList: fromJS(action.slideList),
         recommendList: fromJS(action.recommendList),
         noteList: fromJS(action.noteList),
+        boardList: fromJS(action.boardList)
       });
     case constants.CHANGE_HOME_MORE_LIST:
       return state.merge({

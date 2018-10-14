@@ -5,7 +5,8 @@ const changeHomeList = (result) => ({
   type: constants.CHANGE_HOME_LIST,
   slideList: result.slideList,
   recommendList: result.recommendList,
-  noteList: result.noteList
+  noteList: result.noteList,
+  boardList: result.boardList
 });
 
 const changeHomeMoreList = (result, nextPage) => ({

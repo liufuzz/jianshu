@@ -5,6 +5,7 @@ import { actionCreators } from '../store';
 import { ListWrapper, ListContainer, ListItem, ListInfo, ListMeta, ListMetaItem, LoadMore } from '../style';
 
 class NotoList extends PureComponent {
+
   render() {
     const { list, page, getMoreData } = this.props;
     return (
@@ -46,6 +47,7 @@ class NotoList extends PureComponent {
 const mapState = (state) => ({
   list: state.getIn(['home', 'noteList']),
   page: state.getIn(['home', 'noteListPage']),
+  loading: state.getIn(['home', 'loading'])
 });
 
 const mapDispatch = (dispatch) => ({

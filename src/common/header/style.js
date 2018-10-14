@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.div`
   z-index: 10;
   width: 100%;
   height: 58px;
-  min-height: 50px;
+  transform: translateZ(0);
   margin-bottom: 20px;
   background-color: #fff;
   border-bottom: 1px solid #eee;

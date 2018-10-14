@@ -22,6 +22,7 @@ export const Aside = styled.div`
   margin-left: 40px;
 `;
 
+// Slide样式
 export const SliderWrapper = styled.div`
   margin-bottom: 30px;
   height: 0;
@@ -41,6 +42,7 @@ export const SliderWrapper = styled.div`
   }
 `;
 
+// Recommend样式
 export const RecommendWrapper = styled.div`
   margin-bottom: 20px;
 `;
@@ -75,7 +77,7 @@ export const RecommendMore = styled.span`
   }
 `;
 
-// List样式
+// NoteList样式
 export const ListWrapper = styled.div`
   border-top: 1px solid #dcdcdc;
 `;
@@ -135,4 +137,85 @@ export const LoadMore = styled.div`
   border-radius: 20px;
   background: #a5a5a5;
   font-size: 15px;
+`;
+
+
+// Board样式
+export const BoardWrappper = styled.div`
+  margin-top: -4px;
+  padding-bottom: 4px;
+  min-height: 228px;
+`;
+export const BoardItem = styled.div`
+  img {
+    width: 100%;
+    min-height: 50px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+  }
+`;
+
+// Download 样式
+export const DownloadWrapper = styled.div`
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  padding: 10px 22px;
+  margin-bottom: 30px;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 6px;
+  img {
+    width: 60px;
+    height: 60px;
+    opacity: 0.85;
+    vertical-align: middle;
+  };
+  &:hover {
+    .fade {
+      display: inline-block;
+    }
+  }
+`;
+export const DownloadInfo = styled.div`
+  display: inline-block;
+  margin-left: 7px;
+  vertical-align: middle;
+`;
+export const DownloadInfoTitle = styled.div`
+  font-size: 15px;
+  color: rgb(51, 51, 51);
+  .antd-icon {
+    font-size: 13px;
+    margin-left: 5px;
+  }
+`;
+export const DownloadInfoDesc = styled.div`
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgb(153, 153, 153);
+`;
+
+export const DownloadFade = styled.div`
+  display: none;
+  position: absolute;
+  right: 50px;
+  bottom: 92px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #dcdcdc;;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px #f0f0f0;
+  img {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+  };
+  &::after {
+    content: "";
+    position: absolute;
+    left: 80px;
+    top: 99%;
+    border: 12px solid transparent;
+    border-top-color: #fff;
+  }
 `;
