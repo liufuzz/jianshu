@@ -6,6 +6,8 @@ import Recommend from './components/Recommend';
 import NotoList from './components/NotoList';
 import Board from './components/Board';
 import Download from './components/Download';
+import Authors from './components/Authors';
+import { BackTop } from 'antd';
 import { HomeWrapper, Container, Main, Aside } from './style';
 
 class Home extends PureComponent {
@@ -21,8 +23,10 @@ class Home extends PureComponent {
           <Aside>
             <Board></Board>
             <Download></Download>
+            <Authors></Authors>
           </Aside>
         </Container>
+        <BackTop></BackTop>
       </HomeWrapper>
     )
   }

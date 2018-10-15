@@ -1,0 +1,44 @@
+{
+  "users": [{
+		"id": 3627484,
+		"slug": "c5580cc1c3f4",
+		"nickname": "简书大学堂",
+		"avatar_source": "http://upload.jianshu.io/users/upload_avatars/3627484/eb973bb9-37ba-4d07-acec-850c0a66d1bb.png",
+		"total_likes_count": 23190,
+		"total_wordage": 1207478,
+		"is_following_user": false
+	}, {
+		"id": 2558050,
+		"slug": "d99a7dfae9e4",
+		"nickname": "阿栈",
+		"avatar_source": "http://upload.jianshu.io/users/upload_avatars/2558050/7761b285-2805-4534-9870-ba7dcc7538ec.jpg",
+		"total_likes_count": 676,
+		"total_wordage": 380925,
+		"is_following_user": false
+	}, {
+		"id": 12665193,
+		"slug": "757b5f9f910b",
+		"nickname": "宇文歡",
+		"avatar_source": "http://upload.jianshu.io/users/upload_avatars/12665193/828a449f-efbb-4540-b0af-f6c314810515.jpg",
+		"total_likes_count": 379,
+		"total_wordage": 137653,
+		"is_following_user": false
+	}, {
+		"id": 677687,
+		"slug": "854cb566c478",
+		"nickname": "灰土豆",
+		"avatar_source": "http://upload.jianshu.io/users/upload_avatars/677687/c84b99723362.jpg",
+		"total_likes_count": 1501,
+		"total_wordage": 349804,
+		"is_following_user": false
+	}, {
+		"id": 5545154,
+		"slug": "898bb4ca481d",
+		"nickname": "徐林Grace",
+		"avatar_source": "http://upload.jianshu.io/users/upload_avatars/5545154/1a3d5ed6-9ad1-44b3-9457-3e6a29dd1b71.jpg",
+		"total_likes_count": 4532,
+		"total_wordage": 525821,
+		"is_following_user": false
+	}],
+	"total_count": 3910
+}

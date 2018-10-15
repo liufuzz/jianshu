@@ -6,7 +6,10 @@ const defaultState = fromJS({
   recommendList: [],
   noteList: [],
   noteListPage: 1,
-  boardList: []
+  boardList: [],
+  authorsList: [],
+  spin: false,
+  authorsPage: 0
 });
 
 export default (state = defaultState, action) => {
@@ -23,6 +26,13 @@ export default (state = defaultState, action) => {
         noteList: state.get('noteList').concat(fromJS(action.noteMoreList)),
         noteListPage: action.nextPage
       });
+    case constants.CHANGE_AURHORS_LIST:
+      return state.merge({
+        authorsList: fromJS(action.authorsList),
+        authorsPage: action.page
+      });
+    case constants.HANDLE_SWITCH_CLICK:
+      return state.set('spin', !state.get('spin'))
     default:
       return state;
   }

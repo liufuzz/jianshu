@@ -13,6 +13,12 @@ const changeHomeMoreList = (result, nextPage) => ({
   type: constants.CHANGE_HOME_MORE_LIST,
   noteMoreList: result.noteMoreList,
   nextPage
+});
+
+const changeAuthorsList = (result, nextPage) => ({
+  type: constants.CHANGE_AURHORS_LIST,
+  authorsList: result.users,
+  page: nextPage
 })
 
 export const getHomeData = () => {
@@ -33,4 +39,19 @@ export const getMoreData = (page) => {
       dispatch(changeHomeMoreList(result, page + 1));
     })
   }
-}
+};
+
+export const getAuthorsList = (page) => {
+  return (dispatch) => {
+    axios.get('/api/authorsList/authors' + page + '.json').then((res) => {
+      const result = res.data
+      dispatch(changeAuthorsList(result, page))
+    }).catch(() => {
+      console.log('authors-error')
+    })
+  }
+};
+
+export const handleSwitchClick = () => ({
+  type: constants.HANDLE_SWITCH_CLICK
+})

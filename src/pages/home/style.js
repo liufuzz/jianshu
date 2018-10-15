@@ -4,6 +4,9 @@ export const HomeWrapper = styled.div`
   width: 960px;
   margin: 0 auto;
   padding: 0 15px 100px 15px;
+  .ant-back-top {
+    transform: translateZ(0);
+  }
 `;
 export const Container = styled.div`
   width: 960px;
@@ -217,5 +220,88 @@ export const DownloadFade = styled.div`
     top: 99%;
     border: 12px solid transparent;
     border-top-color: #fff;
+  }
+`;
+
+// Authors样式
+export const AuthorsWrapper = styled.div`
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+  .antd-icon {
+    margin-left: 5px;
+    font-size: 13px;
+  }
+`;
+export const AuthorsTitle = styled.div`
+  text-align: left;
+  font-size: 14px;
+  color: #969696;
+  .page-change {
+    display: block;
+    float: right;
+    cursor: pointer;
+    .sync-icon {
+    margin-right: 5px;
+    font-size: 12px;
+    }
+  };
+  .spin-enter {
+    transition: all .2s;
+  };
+  .spin-enter-active {
+    transform: rotate(360deg);
+  };
+  .spin-exit {
+    transition: all .2s;
+  };
+  .spin-exit-active {
+    transform: rotate(360deg);
+  }
+`;
+export const AuthorsList = styled.ul`
+  margin-bottom: 20px;
+  text-align: left;
+`;
+export const AuthorsItem = styled.li`
+  margin-top: 15px;
+  line-height: 20px;
+  .avatar {
+    float: left;
+    margin-right: 10px;
+  }
+  .follow {
+    float: right;
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #42c02e;
+  }
+  .name {
+    display: block;
+    padding-top: 5px;
+    margin-right: 60px;
+    font-size: 14px;
+  }
+  p {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #969696;
+  }
+`;
+export const AuthorsMore = styled.span`
+  position: absolute;
+  padding: 7px 7px 7px 12px;
+  left: 0;
+  width: 100%;
+  font-size: 13px;
+  color: #787878;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  .antd-icon {
+    margin-left: 5px;
+    font-size: 13px;
   }
 `;
