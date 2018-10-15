@@ -80,7 +80,7 @@ export const RecommendMore = styled.span`
   }
 `;
 
-// NoteList样式
+// NotoList样式
 export const ListWrapper = styled.div`
   border-top: 1px solid #dcdcdc;
 `;
@@ -107,6 +107,9 @@ export const ListInfo = styled.div`
     font-size: 18px;
     font-weight: bold;
     color: #333;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .desc {
     line-height: 24px;

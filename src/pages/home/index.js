@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { actionCreators } from './store';
 import Slide from './components/Slide';
 import Recommend from './components/Recommend';
-import NotoList from './components/NotoList';
+import NoteList from './components/NoteList';
 import Board from './components/Board';
 import Download from './components/Download';
 import Authors from './components/Authors';
@@ -18,7 +18,7 @@ class Home extends PureComponent {
           <Main>
             <Slide></Slide>
             <Recommend></Recommend>
-            <NotoList></NotoList>
+            <NoteList></NoteList>
           </Main>
           <Aside>
             <Board></Board>

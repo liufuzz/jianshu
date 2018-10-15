@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react';
 import { Icon } from 'antd';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { actionCreators } from '../store';
 import { ListWrapper, ListContainer, ListItem, ListInfo, ListMeta, ListMetaItem, LoadMore } from '../style';
 
-class NotoList extends PureComponent {
+class NoteList extends PureComponent {
 
   render() {
     const { list, page, getMoreData } = this.props;
@@ -15,9 +16,13 @@ class NotoList extends PureComponent {
             list.map((item, index) => {
               return (
                 <ListItem key={index}>
-                  <img className='pic' src={item.get('imgUrl')} alt="" />
+                  <Link to={'/note/' + item.get('id')}>
+                    <img className='pic' src={item.get('imgUrl')} alt="" />
+                  </Link>
                   <ListInfo>
-                    <h3 className="title">{item.get('title')}</h3>
+                    <Link to={'/note/' + item.get('id')}>
+                      <h3 className="title">{item.get('title')}</h3>
+                    </Link>
                     <p className="desc">{item.get('desc')}</p>
                     <ListMeta>
                       <ListMetaItem>
@@ -56,4 +61,4 @@ const mapDispatch = (dispatch) => ({
   }
 })
 
-export default connect(mapState, mapDispatch)(NotoList);
+export default connect(mapState, mapDispatch)(NoteList);
