@@ -1,0 +1,4 @@
+export const CHANGE_RECOMMEND_LIST = 'topic/CHANGE_RECOMMEND_LIST';
+export const CHANGE_HOT_LIST = 'topic/CHANGE_HOT_LIST';
+export const CHANGE_CITY_LIST = 'topic/CHANGE_CITY_LIST';
+export const CHANGE_CAMPUS_LIST = 'topic/CHANGE_CAMPUS_LIST';

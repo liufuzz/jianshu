@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Icon } from 'antd';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { RecommendWrapper, RecommendItem, RecommendMore } from '../style';
 
@@ -17,10 +18,12 @@ class Recommend extends PureComponent {
             )
           })
         }
-        <RecommendMore>
-          更多热门专题
+        <Link to='/topic'>
+          <RecommendMore>
+            更多热门专题
           <Icon className='antd-icon' type="right" theme="outlined" />
-        </RecommendMore>
+          </RecommendMore>
+        </Link>
       </RecommendWrapper>
     )
   }
