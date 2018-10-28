@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const NoteWrapper = styled.div`
   position: relative;
-  padding-top: 10px;
+  padding-top: 58px;
 `;
 export const NotePost = styled.div`
   margin: 0 auto;
