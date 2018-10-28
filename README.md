@@ -42,18 +42,18 @@
 
 ​ 首页
 
-​ ![1540738140324](/home/lf/.config/Typora/typora-user-images/1540738140324.png)
+​ ![1540738140324](https://gitee.com/liufu9935/jianshu/blob/master/img-readme/Screenshot%20from%202018-10-28%2023-08-23.png)
 
 ​ 专题页面
 
-![](/home/lf/Downloads/topic-md.png)
+![](https://gitee.com/liufu9935/jianshu/blob/master/img-readme/Screenshot%20from%202018-10-28%2023-08-56.png)
 
 ​ 详情页
 
-​ ![1540737313870](/home/lf/.config/Typora/typora-user-images/1540737313870.png)
+​ ![1540737313870](https://gitee.com/liufu9935/jianshu/blob/master/img-readme/Screenshot%20from%202018-10-28%2023-09-24.png)
 
 ​ 登录页
 
-​ ![](/home/lf/Pictures/login.png)
+​ ![](https://gitee.com/liufu9935/jianshu/blob/master/img-readme/Screenshot%20from%202018-10-28%2023-09-39.png)
 
 #### 更多功能持续更新中．．．
