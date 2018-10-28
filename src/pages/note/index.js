@@ -7,7 +7,7 @@ import { NoteWrapper, NotePost, Article, Author, NoteContent } from './style';
 
 class Note extends PureComponent {
   render() {
-    console.log(this.props)
+    console.log(this.props);
     const { list } = this.props;
     return (
       <NoteWrapper>
@@ -34,27 +34,29 @@ class Note extends PureComponent {
               </div>
             </div>
           </Author>
-          <img src={list.imgUrl} alt=""/>
-          <NoteContent dangerouslySetInnerHTML={{__html: list.content}}></NoteContent>
+          <img src={list.imgUrl} alt="" />
+          <NoteContent dangerouslySetInnerHTML={{ __html: list.content }} />
         </NotePost>
       </NoteWrapper>
-    )
+    );
   }
 
   componentDidMount() {
-    this.props.getNoteList(this.props.match.params.id)
+    this.props.getNoteList(this.props.match.params.id);
   }
 }
 
-const mapState = (state) => ({
+const mapState = state => ({
   list: state.getIn(['note', 'noteList'])
 });
 
-const mapDispatch = (dispatch) => ({
+const mapDispatch = dispatch => ({
   getNoteList(id) {
-    dispatch(actionCreators.getNoteList(id))
+    dispatch(actionCreators.getNoteList(id));
   }
+});
 
-})
-
-export default connect(mapState, mapDispatch)(withRouter(Note));
+export default connect(
+  mapState,
+  mapDispatch
+)(withRouter(Note));

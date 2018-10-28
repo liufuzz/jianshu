@@ -25,7 +25,7 @@ export const Author = styled.div`
     height: 48px;
     vertical-align: middle;
     display: inline-block;
-  };
+  }
   img {
     width: 100%;
     height: 100%;

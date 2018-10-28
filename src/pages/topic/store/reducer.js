@@ -9,16 +9,6 @@ const defaultState = fromJS({
   campus: false
 });
 
-// const Merged = (state, action, boolen) => {
-//   return state.merge({
-//     list: fromJS(action.list),
-//     recommend: true,
-//     hot: false,
-//     city: false,
-//     campus: false
-//   })
-// };
-
 export default (state = defaultState, action) => {
   switch (action.type) {
     case constants.CHANGE_RECOMMEND_LIST:
@@ -56,4 +46,4 @@ export default (state = defaultState, action) => {
     default:
       return state;
   }
-}
+};

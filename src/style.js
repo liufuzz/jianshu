@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components'
+import { injectGlobal } from 'styled-components';
 
 injectGlobal`
   html, body, div, span, applet, object, iframe,
@@ -28,7 +28,6 @@ injectGlobal`
   }
   body {
     line-height: 1;
-    padding-top: 58px;
   }
   ol, ul {
     list-style: none;

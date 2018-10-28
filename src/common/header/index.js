@@ -4,68 +4,103 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { actionCreators } from './store';
 import { CSSTransition } from 'react-transition-group';
+import { actionCreators as loginActionCreators } from '../../pages/login/store';
 import {
-  HeaderWrapper, HeaderNav, Logo, Write, SignUp, Login, IconAa, Container, Navbar, NavbarItem, SearchWrapper,
-  Search, SearchInfo, SearchInfoBox, SearchInfoTitle, SearchInfoSwitch, SearchInfoItem
+  HeaderWrapper,
+  HeaderNav,
+  Logo,
+  Write,
+  SignUp,
+  Login,
+  IconAa,
+  Container,
+  Navbar,
+  NavbarItem,
+  SearchWrapper,
+  Search,
+  SearchInfo,
+  SearchInfoBox,
+  SearchInfoTitle,
+  SearchInfoSwitch,
+  SearchInfoItem
 } from './style';
 
 class Header extends PureComponent {
-
   render() {
     const {
-      focused, mouseIn, spin, list, page, handleInputFocus, handleInputBlur,
-      handleMouseEnter, handleMouseLeave, handleSwitchClick
+      focused,
+      mouseIn,
+      spin,
+      list,
+      page,
+      login,
+      logout,
+      handleInputFocus,
+      handleInputBlur,
+      handleMouseEnter,
+      handleMouseLeave,
+      handleSwitchClick
     } = this.props;
     const newList = list.toJS();
     const pageList = [];
-    const totalPage = Math.ceil(newList.length / 10)
+    const totalPage = Math.ceil(newList.length / 10);
     if (newList.length) {
       for (let i = (page - 1) * 10; i < page * 10; i++) {
         if (newList[i]) {
-          pageList.push(<SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>)
+          pageList.push(
+            <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
+          );
         }
       }
     }
     return (
       <HeaderWrapper>
         <HeaderNav>
-          <Link to='/'>
+          <Link to="/">
             <Logo />
           </Link>
           <Write>
-            <Icon type='edit'></Icon>
+            <Icon type="edit" />
             写文章
           </Write>
           <SignUp>注册</SignUp>
-          <Login>登录</Login>
+          {login ? (
+            <Login className="logout" onClick={logout}>退出</Login>
+          ) : (
+            <Link to="/login">
+              <Login>登录</Login>
+            </Link>
+          )}
           <IconAa>
-            <Icon type='font-colors' />
+            <Icon type="font-colors" />
           </IconAa>
           <Container>
             <Navbar>
-              <Link to='/'>
-                <NavbarItem className='active'>
-                  <Icon className='antd-icon icon' type='compass' />
+              <Link to="/">
+                <NavbarItem className="active">
+                  <Icon className="antd-icon icon" type="compass" />
                   首页
                 </NavbarItem>
               </Link>
               <NavbarItem>
-                <Icon className='antd-icon icon' type='mobile' />
+                <Icon className="antd-icon icon" type="mobile" />
                 下载App
               </NavbarItem>
               <SearchWrapper>
-                <CSSTransition
-                  in={focused}
-                  timeout={300}
-                  classNames='slide'
-                >
+                <CSSTransition in={focused} timeout={300} classNames="slide">
                   <Search
                     className={focused ? 'focused' : ''}
                     onFocus={() => handleInputFocus(list)}
                     onBlur={handleInputBlur}
-                  ></Search>
+                  />
                 </CSSTransition>
-                <Icon className={focused ? 'focused-icon search-icon' : 'search-icon'} type="search" theme="outlined" />
+                <Icon
+                  className={
+                    focused ? 'focused-icon search-icon' : 'search-icon'
+                  }
+                  type="search"
+                  theme="outlined"
+                />
                 <SearchInfo
                   className={focused || mouseIn ? '' : 'hidden'}
                   onMouseEnter={handleMouseEnter}
@@ -80,9 +115,13 @@ class Header extends PureComponent {
                         <CSSTransition
                           in={spin}
                           timeout={200}
-                          classNames='spin'
+                          classNames="spin"
                         >
-                          <Icon className='sync-icon' type='sync' theme='outlined' />
+                          <Icon
+                            className="sync-icon"
+                            type="sync"
+                            theme="outlined"
+                          />
                         </CSSTransition>
                         换一批
                       </SearchInfoSwitch>
@@ -95,42 +134,48 @@ class Header extends PureComponent {
           </Container>
         </HeaderNav>
       </HeaderWrapper>
-    )
+    );
   }
 }
 
-const mapState = (state) => ({
+const mapState = state => ({
   focused: state.getIn(['header', 'focused']),
   mouseIn: state.getIn(['header', 'mouseIn']),
   list: state.getIn(['header', 'list']),
   page: state.getIn(['header', 'page']),
-  spin: state.getIn(['header', 'spin'])
-
+  spin: state.getIn(['header', 'spin']),
+  login: state.getIn(['login', 'login'])
 });
 
-const mapDispatch = (dispatch) => ({
+const mapDispatch = dispatch => ({
   handleInputFocus(list) {
-    dispatch(actionCreators.handleInputFocus())
+    dispatch(actionCreators.handleInputFocus());
     if (list.size === 0) {
-      dispatch(actionCreators.getHeaderList())
+      dispatch(actionCreators.getHeaderList());
     }
   },
   handleInputBlur() {
-    dispatch(actionCreators.handleInputBlur())
+    dispatch(actionCreators.handleInputBlur());
   },
   handleMouseEnter() {
-    dispatch(actionCreators.handleMouseEnter())
+    dispatch(actionCreators.handleMouseEnter());
   },
   handleMouseLeave() {
-    dispatch(actionCreators.handleMouseLeave())
+    dispatch(actionCreators.handleMouseLeave());
   },
   handleSwitchClick(page, totalPage) {
     if (page < totalPage) {
-      dispatch(actionCreators.handleSwitchClick((page + 1)))
+      dispatch(actionCreators.handleSwitchClick(page + 1));
     } else {
-      dispatch(actionCreators.handleSwitchClick(1))
+      dispatch(actionCreators.handleSwitchClick(1));
     }
+  },
+  logout() {
+    dispatch(loginActionCreators.logout())
   }
-})
+});
 
-export default connect(mapState, mapDispatch)(Header);
+export default connect(
+  mapState,
+  mapDispatch
+)(Header);

@@ -25,7 +25,7 @@ export default (state = defaultState, action) => {
       return state.merge({
         page: action.page,
         spin: !state.get('spin')
-      })
+      });
     default:
       return state;
   }

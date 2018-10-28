@@ -8,29 +8,30 @@ class Recommend extends PureComponent {
   render() {
     return (
       <RecommendWrapper>
-        {
-          this.props.list.map((item) => {
-            return (
-              <RecommendItem key={item.get('id')}>
-                <img src={item.get('imgUrl')} alt="" />
-                <span>{item.get('title')}</span>
-              </RecommendItem>
-            )
-          })
-        }
-        <Link to='/topic'>
+        {this.props.list.map(item => {
+          return (
+            <RecommendItem key={item.get('id')}>
+              <img src={item.get('imgUrl')} alt="" />
+              <span>{item.get('title')}</span>
+            </RecommendItem>
+          );
+        })}
+        <Link to="/topic">
           <RecommendMore>
             更多热门专题
-          <Icon className='antd-icon' type="right" theme="outlined" />
+            <Icon className="antd-icon" type="right" theme="outlined" />
           </RecommendMore>
         </Link>
       </RecommendWrapper>
-    )
+    );
   }
 }
 
-const mapState = (state) => ({
+const mapState = state => ({
   list: state.getIn(['home', 'recommendList'])
-})
+});
 
-export default connect(mapState, null)(Recommend);
+export default connect(
+  mapState,
+  null
+)(Recommend);

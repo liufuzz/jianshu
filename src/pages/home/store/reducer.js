@@ -32,8 +32,8 @@ export default (state = defaultState, action) => {
         authorsPage: action.page
       });
     case constants.HANDLE_SWITCH_CLICK:
-      return state.set('spin', !state.get('spin'))
+      return state.set('spin', !state.get('spin'));
     default:
       return state;
   }
-}
+};

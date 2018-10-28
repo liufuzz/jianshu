@@ -12,23 +12,28 @@ class Slide extends PureComponent {
       speed: 500,
       autoplaySpeed: 4000,
       pauseOnHover: true
-    }
+    };
     return (
       <SliderWrapper>
         <Carousel {...settings}>
-          {
-            this.props.list.map((item) => {
-              return <div key={item.get('id')}><img className='img' src={item.get('imgUrl')} alt="" /></div>
-            })
-          }
+          {this.props.list.map(item => {
+            return (
+              <div key={item.get('id')}>
+                <img className="img" src={item.get('imgUrl')} alt="" />
+              </div>
+            );
+          })}
         </Carousel>
       </SliderWrapper>
-    )
+    );
   }
 }
 
-const mapState = (state) => ({
+const mapState = state => ({
   list: state.getIn(['home', 'slideList'])
 });
 
-export default connect(mapState, null)(Slide);
+export default connect(
+  mapState,
+  null
+)(Slide);

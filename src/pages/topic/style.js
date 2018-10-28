@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TopicWrapper = styled.div`
   width: 960px;
   margin: 0 auto;
-  padding: 30px 0 50px;
+  padding: 88px 0 50px;
   img {
     width: 100%;
   }
@@ -31,7 +31,7 @@ export const MenuItem = styled.li`
     font-size: 17px;
   }
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 50%;
     bottom: -2px;
@@ -39,12 +39,12 @@ export const MenuItem = styled.li`
     opacity: 0;
     border-bottom: 2px solid #646464;
     transform: translate(-50%) scaleX(0);
-    transition: .2s ease-in-out;
-  };
+    transition: 0.2s ease-in-out;
+  }
   &:hover::after {
     opacity: 1;
     transform: translate(-50%) scaleX(1);
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
   &.active {
     color: #646464;
@@ -67,9 +67,9 @@ export const TopicColWrap = styled.div`
   padding: 0 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
-  background-color: hsla(0,0%,71%,.1);
+  background-color: hsla(0, 0%, 71%, 0.1);
   &:hover {
-    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   }
   .avatar {
     width: 80px;

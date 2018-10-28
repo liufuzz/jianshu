@@ -2,10 +2,10 @@ import axios from 'axios';
 import { fromJS } from 'immutable';
 import * as constants from './constants';
 
-const getInputList = (data) => ({
+const getInputList = data => ({
   type: constants.GET_INPUT_LIST,
   data: fromJS(data)
-})
+});
 
 export const handleInputFocus = () => ({
   type: constants.CHANGE_INPUT_FOCUS,
@@ -28,12 +28,12 @@ export const handleMouseLeave = () => ({
 });
 
 export const getHeaderList = () => {
-  return (dispatch) => {
-    axios.get('/api/headerList.json').then((res) => {
+  return dispatch => {
+    axios.get('/api/headerList.json').then(res => {
       const result = res.data.data;
-      dispatch(getInputList(result))
-    })
-  }
+      dispatch(getInputList(result));
+    });
+  };
 };
 
 export const handleSwitchClick = (page, spin) => ({
@@ -41,4 +41,3 @@ export const handleSwitchClick = (page, spin) => ({
   page,
   spin: !spin
 });
-

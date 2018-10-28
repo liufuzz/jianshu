@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import LogoPic from '../../statics/logo.png'
+import LogoPic from '../../statics/logo.png';
 
 export const HeaderWrapper = styled.div`
   position: fixed;
@@ -18,6 +18,9 @@ export const HeaderNav = styled.div`
   max-width: 1440px;
   height: 56px;
   margin: 0 auto;
+  .logout {
+    cursor: pointer;
+  }
 `;
 export const Logo = styled.div`
   float: left;
@@ -46,7 +49,7 @@ export const SignUp = styled.div`
   line-height: 40px;
   text-align: center;
   margin: 9px 5px 0 15px;
-  border: 1px solid rgba(236,97,73,.7);
+  border: 1px solid rgba(236, 97, 73, 0.7);
   border-radius: 20px;
   font-size: 15px;
   color: #ea6f5a;
@@ -85,12 +88,12 @@ export const Navbar = styled.ul`
     .icon {
       display: none;
     }
-  };
+  }
   @media (max-width: 960px) {
     input {
       display: none;
     }
-  };
+  }
 `;
 export const NavbarItem = styled.li`
   float: left;
@@ -120,7 +123,7 @@ export const SearchWrapper = styled.div`
     border-radius: 15px;
     font-size: 18px;
     color: #969696;
-  };
+  }
   .focused-icon {
     background: #999;
     color: #fff;
@@ -131,8 +134,8 @@ export const Search = styled.input.attrs({
 })`
   width: 240px;
   height: 38px;
-  padding:0 35px 0 20px;
-  box-sizing: border-box; 
+  padding: 0 35px 0 20px;
+  box-sizing: border-box;
   margin-top: 9px;
   margin-left: 20px;
   border: none;
@@ -143,19 +146,19 @@ export const Search = styled.input.attrs({
   color: #666;
   &.focused {
     width: 320px;
-  };
+  }
   &.slide-enter {
-    transition: all .3s ease-out
-  };
+    transition: all 0.3s ease-out;
+  }
   &.slide-enter-active {
     width: 320px;
-  };
+  }
   &.slide-exit {
-    transition: all .3s ease-out
-  };
+    transition: all 0.3s ease-out;
+  }
   &.slide-exit-active {
     width: 240px;
-};
+  }
 `;
 export const SearchInfo = styled.div`
   position: absolute;
@@ -165,10 +168,10 @@ export const SearchInfo = styled.div`
   margin-top: 11px;
   border-radius: 4px;
   background: #fff;
-  box-shadow: 0 0 8px rgba(0,0,0,.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   z-index: 2;
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 25px;
     bottom: 99%;
@@ -194,23 +197,23 @@ export const SearchInfoSwitch = styled.span`
   cursor: pointer;
   &:hover {
     color: #333;
-  };
+  }
   .sync-icon {
     margin-right: 8px;
     font-size: 12px;
-  };
+  }
   .spin-enter {
     transition: All 0.2s;
-  };
+  }
   .spin-enter-active {
     transform: rotate(360deg);
-  };
+  }
   .spin-exit {
     transition: All 0.2s;
-  };
+  }
   .spin-exit-active {
     transform: rotate(360deg);
-  };
+  }
 `;
 export const SearchInfoItem = styled.span`
   float: left;
@@ -224,5 +227,5 @@ export const SearchInfoItem = styled.span`
   &:hover {
     color: #333;
     border-color: #eee;
-  };
+  }
 `;

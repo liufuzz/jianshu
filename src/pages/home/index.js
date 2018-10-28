@@ -16,34 +16,35 @@ class Home extends PureComponent {
       <HomeWrapper>
         <Container>
           <Main>
-            <Slide></Slide>
-            <Recommend></Recommend>
-            <NoteList></NoteList>
+            <Slide />
+            <Recommend />
+            <NoteList />
           </Main>
           <Aside>
-            <Board></Board>
-            <Download></Download>
-            <Authors></Authors>
+            <Board />
+            <Download />
+            <Authors />
           </Aside>
         </Container>
-        <BackTop></BackTop>
+        <BackTop />
       </HomeWrapper>
-    )
+    );
   }
 
   componentDidMount() {
-    this.props.getHomeData()
-  };
-};
+    this.props.getHomeData();
+  }
+}
 
-const mapState = (state) => ({
+const mapState = state => ({});
 
-});
-
-const mapDispatch = (dispatch) => ({
+const mapDispatch = dispatch => ({
   getHomeData() {
-    dispatch(actionCreators.getHomeData())
+    dispatch(actionCreators.getHomeData());
   }
 });
 
-export default connect(mapState, mapDispatch)(Home);
+export default connect(
+  mapState,
+  mapDispatch
+)(Home);
