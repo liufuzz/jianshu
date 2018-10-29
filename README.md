@@ -42,18 +42,18 @@
 
 ​ 首页
 
-​ ![1540738140324](https://gitee.com/liufu9935/jianshu/blob/master/img-readme/Screenshot%20from%202018-10-28%2023-08-23.png)
+​ (![home](http://phcdc0ikx.bkt.clouddn.com/18-10-29/41237576.jpg))
 
 ​ 专题页面
 
-![](https://gitee.com/liufu9935/jianshu/blob/master/img-readme/Screenshot%20from%202018-10-28%2023-08-56.png)
+(![topic](http://phcdc0ikx.bkt.clouddn.com/18-10-29/82884766.jpg))
 
 ​ 详情页
 
-​ ![1540737313870](https://gitee.com/liufu9935/jianshu/blob/master/img-readme/Screenshot%20from%202018-10-28%2023-09-24.png)
+​ (![detail](http://phcdc0ikx.bkt.clouddn.com/18-10-29/59399181.jpg))
 
 ​ 登录页
 
-​ ![](https://gitee.com/liufu9935/jianshu/blob/master/img-readme/Screenshot%20from%202018-10-28%2023-09-39.png)
+​ (![login](http://phcdc0ikx.bkt.clouddn.com/18-10-29/11433767.jpg))
 
-#### 更多功能持续更新中．．．
+#### 持续更新中．．．
