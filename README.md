@@ -42,18 +42,18 @@
 
 ​ 首页
 
-​ (![home](http://phcdc0ikx.bkt.clouddn.com/18-10-29/41237576.jpg))
+​ ![home](http://phcdc0ikx.bkt.clouddn.com/18-10-29/41237576.jpg)
 
 ​ 专题页面
 
-(![topic](http://phcdc0ikx.bkt.clouddn.com/18-10-29/82884766.jpg))
+![topic](http://phcdc0ikx.bkt.clouddn.com/18-10-29/82884766.jpg)
 
 ​ 详情页
 
-​ (![detail](http://phcdc0ikx.bkt.clouddn.com/18-10-29/59399181.jpg))
+​ ![detail](http://phcdc0ikx.bkt.clouddn.com/18-10-29/59399181.jpg)
 
 ​ 登录页
 
-​ (![login](http://phcdc0ikx.bkt.clouddn.com/18-10-29/11433767.jpg))
+​ ![login](http://phcdc0ikx.bkt.clouddn.com/18-10-29/11433767.jpg)
 
 #### 持续更新中．．．
